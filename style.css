@@ -1,0 +1,58 @@
+html,body{
+    height: 100%;
+}
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(202, 17, 17);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.board{
+
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    background-color: greenyellow;
+}
+
+h1{
+
+    color: white;
+}
+
+.cell{
+
+    border: 5px solid black;
+    border-top: 5px solid black;
+    text-align: center;
+    line-height: 95px; 
+    font-size: 3em;
+    cursor: pointer;
+    user-select: none;
+
+
+}
+
+.cell:nth-child(3n){
+
+    border-right: none;
+}
+
+.cell:nth-child(n+7){
+
+    border-bottom: none;
+}
+
+.cell.high{
+
+    background-color: rgb(129, 76, 139) ;
+}
+
+
